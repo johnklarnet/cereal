@@ -318,6 +318,7 @@ struct DeviceState @0xa4d8b5af2aa492eb {
   modemTempC @36 :List(Float32);
   pmicTempC @39 :List(Float32);
   thermalZones @38 :List(ThermalZone);
+  geoRecording @41 :GeoRecordingStatus;
   thermalStatus @14 :ThermalStatus;
 
   fanSpeedPercentDesired @10 :UInt16;
@@ -333,6 +334,12 @@ struct DeviceState @0xa4d8b5af2aa492eb {
     yellow @1;
     red @2;
     danger @3;
+  }
+
+  enum GeoRecordingStatus {
+    nogps @0;
+    on @1;
+    off @2;
   }
 
   enum NetworkType {
